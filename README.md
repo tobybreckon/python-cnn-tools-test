@@ -107,6 +107,6 @@ We are using matplotlib: ???
 .. and this is in Python: PPP
 
 ```
-- such that PT.PT.PT >= 0.x.x (or higher); <DEVICE STRING NAME> looks sensible given the GPU in the machine; PPP > 3.x; ??? = (doesn't matter)
+- such that PT.PT.PT >= 0.x.x (or higher); "DEVICE STRING NAME" looks sensible given the GPU in the machine; PPP > 3.x; ??? = (doesn't matter)
 
 ---
