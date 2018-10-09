@@ -2,9 +2,9 @@
 
 As Tensorflow, Keras and Pytorch are complex beasts, to ensure the correct GPU installation of each is working correctly we perform the following simple tests.
 
-All tested with Tensorflow, Keras and Pytorch and Python 3.x on linux
+All tested with Tensorflow, Keras and Pytorch and Python 3.x **on Linux**.
 
-_Assumes that git and wget tools are available on the command line or that similar tools are available to access git / download files._
+_Assumes that git tools are available on the command line or that similar tools are available to access git / download files._
 
 ---
 
@@ -93,11 +93,13 @@ python3 ./pytorch-test.py
 
 ## Result #3:
 
+- Text output to console such that:
+
 ```
 We are using pytorch: PT.PT.PT
 We believe we have the following # of GPU:
 1
-The first GPU a<DEVICE STRING NAME>vailable is:
+The first GPU available is:
 <DEVICE STRING NAME>
 
 We are using numpy: ???
