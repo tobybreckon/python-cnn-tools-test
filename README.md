@@ -55,7 +55,7 @@ We are using matplotlib: ???
 
 ---
 
-## Test #2 - test Keras
+## Test #2 - check Keras
 
 
 ```
@@ -84,14 +84,14 @@ We are using matplotlib: ???
 
 ---
 
-## Test #3 - test Pytorch
+## Test #3 - check Pytorch
 
 ```
 .. (as per test 1 for steps 1 + 2)
 python3 ./pytorch-test.py
 ```
 
-## Result #3:
+### Result #3:
 
 - Text output to console such that:
 
