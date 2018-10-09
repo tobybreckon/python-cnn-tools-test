@@ -17,7 +17,7 @@ python3 ./tf-test.py
 ```
 ### Result #1:
 
-- Text output to console such that:
+Text output to console such that:
 
 ```
 We are using tensorflow: T.T.T
@@ -51,7 +51,7 @@ We are using matplotlib: ???
 .. and this is in Python: PPP
 
 ```
-- such that T.T.T >= 1.9.x; MMM > 0; PPP > 3.x; ??? = (doesn't matter)
+...  where T.T.T >= 1.9.x; MMM > 0; PPP > 3.x; ??? = (doesn't matter)
 
 ---
 
@@ -65,7 +65,7 @@ python3 ./keras-test.py
 
 ### Result #2:
 
-- Text output to console such that:
+Text output to console such that:
 
 ```
 Using TensorFlow backend.
@@ -80,7 +80,7 @@ We are using matplotlib: ???
 .. and this is in Python: PPP
 
 ```
-- such that K.K.K >= 2.2.x (or higher); PPP > 3.x; ??? = (doesn't matter)
+... where K.K.K >= 2.2.x (or higher); PPP > 3.x; ??? = (doesn't matter)
 
 ---
 
@@ -93,7 +93,7 @@ python3 ./pytorch-test.py
 
 ### Result #3:
 
-- Text output to console such that:
+Text output to console such that:
 
 ```
 We are using pytorch: PT.PT.PT
@@ -107,6 +107,33 @@ We are using matplotlib: ???
 .. and this is in Python: PPP
 
 ```
-- such that PT.PT.PT >= 0.x.x (or higher); "DEVICE STRING NAME" looks sensible given the GPU in the machine; PPP > 3.x; ??? = (doesn't matter)
+... where PT.PT.PT >= 0.x.x (or higher); "DEVICE STRING NAME" looks sensible given the GPU in the machine; PPP > 3.x; ??? = (doesn't matter)
 
 ---
+
+## Test #4 - TensorFlow and OpenCV full system check - low performance
+
+```
+git clone https://github.com/tobybreckon/fire-detection-cnn.git
+cd fire-detection-cnn
+sh ./download-models.sh
+python3 firenet.py models/test.mp4
+
+```
+
+### Result #4:
+- model download (step 3) will depend on network speed
+- video displayed in real-time, is not slow or jerky, and appropriate  Red Fire/Green Clear labels displayed depending on contents of image frame
+
+---
+
+## Test #5 - TensorFlow and OpenCV full system check - high performance
+
+```
+(as per steps 1-3 of Test 4)
+python3 superpixel-inceptionV1-OnFire.py models/test.mp4
+
+```
+
+### Result #5:
+- video displayed in real-time, is not slow or jerky **with update of several frames per second observed**, and appropriate Red/Green labels displayed depending on contents of  (where Green is fire regions)
