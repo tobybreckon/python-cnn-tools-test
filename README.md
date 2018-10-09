@@ -113,6 +113,8 @@ We are using matplotlib: ???
 
 ## Test #4 - TensorFlow and OpenCV full system check - low performance
 
+* this tests we can use basic OpenCV (hopefully 3.x) with TensorFlow in the same python script
+
 ```
 git clone https://github.com/tobybreckon/fire-detection-cnn.git
 cd fire-detection-cnn
@@ -128,6 +130,8 @@ python3 firenet.py models/test.mp4
 ---
 
 ## Test #5 - TensorFlow and OpenCV full system check - high performance
+
+* this tests we can use advanced extra module functionality within OpenCV (hopefully 3.x) with TensorFlow in the same python script
 
 ```
 (as per steps 1-3 of Test 4)
