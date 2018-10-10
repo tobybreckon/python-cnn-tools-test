@@ -61,6 +61,29 @@ We are using matplotlib: ???
 
 ---
 
+## Test #1a - check Scikit-Learn toolkit
+
+```
+.. (as per test 1 for steps 1 + 2)
+python3 ./sklearn-test.py
+```
+
+### Result #1a:
+
+Text output to console such that:
+
+```
+scikit-learn is available - version: S.S.S.
+
+We are using numpy: ???
+We are using matplotlib: ???
+.. and this is in Python: PPP
+
+```
+... where S.S.S >= 0.20.x (or higher); PPP > 3.x; ??? = (doesn't matter)
+
+---
+
 ## Test #2 - check Keras
 
 
