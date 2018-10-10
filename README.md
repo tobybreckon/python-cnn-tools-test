@@ -14,7 +14,7 @@ _Assumes that git and wget tools are available on the command line or that simil
 
 ---
 
-## Test #1 - check tensorflow:
+## Test #1 - check TensorFlow:
 
 ```
 git clone https://github.com/tobybreckon/python-cnn-tools-test.git
