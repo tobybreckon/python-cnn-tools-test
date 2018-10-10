@@ -1,6 +1,6 @@
 # Verification Testing for Deep Learning CNN Tools
 
-As Tensorflow, Keras and Pytorch are complex beasts, to ensure the correct GPU installation of each is working correctly we perform the following simple tests.
+As Tensorflow, Keras and Pytorch are complex beasts, to ensure the GPU installation of each is working correctly we perform the following simple tests.
 
 All tested with Tensorflow, Keras and Pytorch and Python 3.x **on Linux**.
 
