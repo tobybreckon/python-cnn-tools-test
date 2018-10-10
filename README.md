@@ -7,6 +7,7 @@ All tested with Tensorflow, Keras and Pytorch and Python 3.x **on Linux**.
  * For **TensorFlow** only - use tests 1, 4 and 5 only.
  * For **Keras** (which uses TensorFlow as a backend) - use tests 1, 2, 4, 5 only.
  * For **PyTorch** only - use test 3 only.
+ * _See very simple test 1a for additionally testing sci-kit-learn is available in the same python environment_
 
 _Assumes that git and wget tools are available on the command line or that similar tools are available to access git / download files._
 
@@ -62,6 +63,8 @@ We are using matplotlib: ???
 ---
 
 ## Test #1a - check Scikit-Learn toolkit
+
+[this is also very useful to have for most machine learning]
 
 ```
 .. (as per test 1 for steps 1 + 2)
