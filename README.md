@@ -4,7 +4,7 @@ As Tensorflow, Keras and Pytorch are complex beasts, to ensure the correct GPU i
 
 All tested with Tensorflow, Keras and Pytorch and Python 3.x **on Linux**.
 
-_Assumes that git tools are available on the command line or that similar tools are available to access git / download files._
+_Assumes that git and wget tools are available on the command line or that similar tools are available to access git / download files._
 
 ---
 
@@ -125,7 +125,7 @@ python3 firenet.py models/test.mp4
 
 ### Result #4:
 - model download (step 3) will depend on network speed
-- video displayed in real-time, is not slow or jerky, and appropriate  Red Fire/Green Clear labels displayed depending on contents of image frame
+- **video displayed in real-time, is not slow or jerky,** and appropriate  Red Fire/Green Clear labels displayed depending on contents of image frame
 
 ---
 
