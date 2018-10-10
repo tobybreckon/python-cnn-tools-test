@@ -27,6 +27,37 @@ print();
 
 #####################################################################
 
+from torch.autograd import Variable
+from torchvision import models
+
+print ("Testing pytorch with CPU ....");
+
+# BEGIN CPU TEST
+
+alexnet = models.alexnet(pretrained=True);
+x = Variable(torch.randn(1, 3, 227, 227));
+y = alexnet(x)
+print ("CPU computation *** success ***.");
+print();
+
+
+print ("Testing pytorch with GPU ....");
+
+try:
+    # BEGIN GPU TEST
+    x = x.cuda();
+    alexnet = alexnet.cuda();
+    y = alexnet(x); #<--------- potential GPU FAIL here
+    print ("CPU computation *** success ***.");
+    print();
+except:
+    print ("GPU computation *** FAILURE ***.")
+    print();
+
+
+
+#####################################################################
+
 # check other stuff
 
 print("We are using numpy: " + np.__version__);
