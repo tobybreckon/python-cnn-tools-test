@@ -42,7 +42,7 @@ with tf.device('/cpu:0'):
 
     with tf.Session() as sess:
         print (sess.run(c))
-        print ("CPU computation success.");
+        print ("CPU computation *** success ***.");
         print();
 
 #####################################################################
@@ -59,10 +59,10 @@ try:
 
         with tf.Session() as sess:
             print (sess.run(c))
-            print ("GPU computation success.");
+            print ("GPU computation *** success ***.");
 except:
-        print ("GPU computation failure.")
-        print();
+    print ("GPU computation *** FAILURE ***.")
+    print();
 
 ###############################################print();######################
 
