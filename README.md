@@ -4,6 +4,10 @@ As Tensorflow, Keras and Pytorch are complex beasts, to ensure the correct GPU i
 
 All tested with Tensorflow, Keras and Pytorch and Python 3.x **on Linux**.
 
+ * For **TensorFlow** only - use tests 1, 4 and 5 only.
+ * For **Keras** (which uses TensorFlow as a backend) - use tests 1, 2, 4, 5 only.
+ * For **PyTorch** only - use test 3 only.
+
 _Assumes that git and wget tools are available on the command line or that similar tools are available to access git / download files._
 
 ---
@@ -39,12 +43,12 @@ memory_limit: MMMM
 Testing tensorflow with CPU ....
 [[22. 28.]
  [49. 64.]]
-CPU computation success.
+CPU computation *** success ***.
 
 Testing tensorflow with GPU ....
 [[22. 28.]
  [49. 64.]]
-GPU computation success.
+GPU computation *** success ***.
 
 We are using numpy: ???
 We are using matplotlib: ???
@@ -101,6 +105,12 @@ We believe we have the following # of GPU:
 1
 The first GPU available is:
 <DEVICE STRING NAME>
+
+Testing pytorch with CPU ....
+CPU computation *** success ***.
+
+Testing pytorch with GPU ....
+GPU computation *** success ***.
 
 We are using numpy: ???
 We are using matplotlib: ???
