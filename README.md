@@ -10,6 +10,8 @@ All tested with Tensorflow, Keras and Pytorch and Python 3.x **on Linux**.
 
 _Assumes that git and wget tools are available on the command line or that similar tools are available to access git / download files._
 
+**Tests 4 and 5 assume you have OpenCV aleady installed** (with the extra modules also for Test 5) - OpenCV has its own testing page and test suite here - https://github.com/tobybreckon/python-examples-ip/blob/master/TESTING.md
+
 ---
 
 ## Test #1 - check tensorflow:
