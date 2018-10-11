@@ -175,6 +175,8 @@ Loaded CNN network weights ...
 Loaded video ..
 ```
 
+... ??? = (detail doesn't matter but should clearly indicate GPU usage by type/name/bus or similar)
+
 Then:
 
 - model download (step 3) will depend on network speed
@@ -203,6 +205,8 @@ Constructed SP-InceptionV1-OnFire ...
 Loaded CNN network weights ...
 Loaded video ..
 ```
+
+... ??? = (detail doesn't matter but should clearly indicate GPU usage by type/name/bus or similar)
 
 Then:
 
