@@ -48,7 +48,7 @@ try:
     x = x.cuda();
     alexnet = alexnet.cuda();
     y = alexnet(x); #<--------- potential GPU FAIL here
-    print ("CPU computation *** success ***.");
+    print ("GPU computation *** success ***.");
     print();
 except:
     print ("GPU computation *** FAILURE ***.")
