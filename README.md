@@ -44,11 +44,13 @@ memory_limit: MMMM
 
 
 Testing tensorflow with CPU ....
+???
 [[22. 28.]
  [49. 64.]]
 CPU computation *** success ***.
 
 Testing tensorflow with GPU ....
+???
 [[22. 28.]
  [49. 64.]]
 GPU computation *** success ***.
