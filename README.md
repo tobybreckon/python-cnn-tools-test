@@ -9,7 +9,7 @@ All tested with Tensorflow, Keras and Pytorch and Python 3.x **on Linux**.
  * For **PyTorch** only - use test 3 only.
  * _See very simple test 1a for additionally testing sci-kit-learn is available in the same python environment_
 
-_Assumes that git and wget tools are available on the command line or that similar tools are available to access git / download files._
+_Assumes that the git, wget, md5sum and curl tools are available on the command line or that similar tools are available to access git / download files._
 
 **Tests 4 and 5 assume you have OpenCV aleady installed** (with the extra modules also for Test 5) - OpenCV has its own testing page and test suite here - https://github.com/tobybreckon/python-examples-ip/blob/master/TESTING.md
 
@@ -164,6 +164,19 @@ python3 firenet.py models/test.mp4
 ```
 
 ### Result #4:
+
+Text output to console such that:
+
+```
+???
+Constructed FireNet ...
+???
+Loaded CNN network weights ...
+Loaded video ..
+```
+
+Then:
+
 - model download (step 3) will depend on network speed
 - **video displayed in real-time, is not slow or jerky,** and appropriate  Red Fire/Green Clear labels displayed depending on contents of image frame
 
@@ -180,4 +193,17 @@ python3 superpixel-inceptionV1-OnFire.py models/test.mp4
 ```
 
 ### Result #5:
+
+Text output to console such that:
+
+```
+???
+Constructed SP-InceptionV1-OnFire ...
+???
+Loaded CNN network weights ...
+Loaded video ..
+```
+
+Then:
+
 - video displayed in real-time, is not slow or jerky **with update of several frames per second observed**, and appropriate Red/Green labels displayed depending on contents of  (where Green is fire regions)
