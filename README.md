@@ -67,7 +67,7 @@ We are using matplotlib: ???
 [this is also very useful to have for most machine learning]
 
 ```
-.. (as per test 1 for steps 1 + 2)
+.. (as per test 1 for steps 1 + 2 - no need to repeat if already completed)
 python3 ./sklearn-test.py
 ```
 
@@ -91,7 +91,7 @@ We are using matplotlib: ???
 
 
 ```
-.. (as per test 1 for steps 1 + 2)
+.. (as per test 1 for steps 1 + 2 - no need to repeat if already completed)
 python3 ./keras-test.py
 ```
 
@@ -119,7 +119,7 @@ We are using matplotlib: ???
 ## Test #3 - check Pytorch
 
 ```
-.. (as per test 1 for steps 1 + 2)
+.. (as per test 1 for steps 1 + 2 - no need to repeat if already completed)
 python3 ./pytorch-test.py
 ```
 
@@ -172,7 +172,7 @@ python3 firenet.py models/test.mp4
 * this tests we can use advanced extra module functionality within OpenCV (hopefully 3.x) with TensorFlow in the same python script
 
 ```
-(as per steps 1-3 of Test 4)
+(as per steps 1-3 of Test 4 - no need to repeat if already completed)
 python3 superpixel-inceptionV1-OnFire.py models/test.mp4
 
 ```
