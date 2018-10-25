@@ -183,6 +183,8 @@ Then:
 
 - model download (step 3) will depend on network speed
 - **video displayed in real-time, is not slow or jerky,** and appropriate  Red Fire/Green Clear labels displayed depending on contents of image frame
+- may need to resize window to display full image correctly. Or press "f" for fullscreen mode. 
+- Press "x" to exit
 
 ---
 
@@ -213,3 +215,4 @@ Loaded video ..
 Then:
 
 - video displayed in real-time, is not slow or jerky **with update of several frames per second observed**, and appropriate Red/Green labels displayed depending on contents of  (where Green is fire regions)
+- Press "x" to exit
