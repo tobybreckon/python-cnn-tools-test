@@ -9,7 +9,9 @@ All tested with Tensorflow, Keras and Pytorch and Python 3.x **on Linux**.
  * For **PyTorch** only - use test 3 only.
  * _See very simple test 1a for additionally testing sci-kit-learn is available in the same python environment_
 
-_Assumes that git and wget tools are available on the command line or that similar tools are available to access git / download files._
+N.B. Durham Students - ***if testing/using on the Durham University LDS (linux) system*** you need to first run ```tensorflow.init```, ```pytorch.init``` and ```opencv3-4.init``` in the command shell to add the relevant paths for these tools to the ```PYTHONPATH``` environment variable (and be sitting at a machine with a GPU in it!).
+
+_Assumes that the git, wget, md5sum and curl tools are available on the command line or that similar tools are available to access git / download files._
 
 **Tests 4 and 5 assume you have OpenCV aleady installed** (with the extra modules also for Test 5) - OpenCV has its own testing page and test suite here - https://github.com/tobybreckon/python-examples-ip/blob/master/TESTING.md
 
@@ -47,11 +49,13 @@ memory_limit: MMMM
 
 
 Testing tensorflow with CPU ....
+???
 [[22. 28.]
  [49. 64.]]
 CPU computation *** success ***.
 
 Testing tensorflow with GPU ....
+???
 [[22. 28.]
  [49. 64.]]
 GPU computation *** success ***.
@@ -70,7 +74,7 @@ We are using matplotlib: ???
 [this is also very useful to have for most machine learning]
 
 ```
-.. (as per test 1 for steps 1 + 2)
+.. (as per test 1 for steps 1 + 2 - no need to repeat if already completed)
 python3 ./sklearn-test.py
 ```
 
@@ -94,7 +98,7 @@ We are using matplotlib: ???
 
 
 ```
-.. (as per test 1 for steps 1 + 2)
+.. (as per test 1 for steps 1 + 2 - no need to repeat if already completed)
 python3 ./keras-test.py
 ```
 
@@ -122,7 +126,7 @@ We are using matplotlib: ???
 ## Test #3 - check Pytorch
 
 ```
-.. (as per test 1 for steps 1 + 2)
+.. (as per test 1 for steps 1 + 2 - no need to repeat if already completed)
 python3 ./pytorch-test.py
 ```
 
@@ -165,8 +169,25 @@ python3 firenet.py models/test.mp4
 ```
 
 ### Result #4:
+
+Text output to console such that:
+
+```
+???
+Constructed FireNet ...
+???
+Loaded CNN network weights ...
+Loaded video ..
+```
+
+... ??? = (detail doesn't matter but should clearly indicate GPU usage by type/name/bus or similar)
+
+Then:
+
 - model download (step 3) will depend on network speed
 - **video displayed in real-time, is not slow or jerky,** and appropriate  Red Fire/Green Clear labels displayed depending on contents of image frame
+- may need to resize window to display full image correctly. Or press "f" for fullscreen mode. 
+- Press "x" to exit
 
 ---
 
@@ -175,10 +196,26 @@ python3 firenet.py models/test.mp4
 * this tests we can use advanced extra module functionality within OpenCV (hopefully 3.x) with TensorFlow in the same python script
 
 ```
-(as per steps 1-3 of Test 4)
+(as per steps 1-3 of Test 4 - no need to repeat if already completed)
 python3 superpixel-inceptionV1-OnFire.py models/test.mp4
 
 ```
 
 ### Result #5:
+
+Text output to console such that:
+
+```
+???
+Constructed SP-InceptionV1-OnFire ...
+???
+Loaded CNN network weights ...
+Loaded video ..
+```
+
+... ??? = (detail doesn't matter but should clearly indicate GPU usage by type/name/bus or similar)
+
+Then:
+
 - video displayed in real-time, is not slow or jerky **with update of several frames per second observed**, and appropriate Red/Green labels displayed depending on contents of  (where Green is fire regions)
+- Press "x" to exit
