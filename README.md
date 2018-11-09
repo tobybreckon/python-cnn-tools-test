@@ -15,7 +15,7 @@ _Assumes that the git, wget, md5sum and curl tools are available on the command 
 
 **Tests 4 and 5 assume you have OpenCV aleady installed** (with the extra modules also for Test 5) - OpenCV has its own testing page and test suite here - https://github.com/tobybreckon/python-examples-ip/blob/master/TESTING.md
 
-An additional test script for MxNet is also available (```mxnet-test.py```) but this is not currently incldued within the the set of software supported by the set of tests below
+An additional test script for MxNet is also available (```mxnet-test.py```) but this is not currently included within the the set of software supported by the set of explicit tests below
 (which is primarily used to test our on campus teaching lab provision of TensorFlow, Keras and Pytorch at [Durham University](https:/www.durham.ac.uk/)).
 
 ---
