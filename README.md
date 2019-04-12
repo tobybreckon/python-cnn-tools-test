@@ -197,7 +197,7 @@ Then:
 
 ```
 (as per steps 1-3 of Test 4 - no need to repeat if already completed)
-python3 superpixel-inceptionV1-OnFire.py models/test.mp4
+python3 superpixel-inceptionV1OnFire.py models/test.mp4
 
 ```
 
