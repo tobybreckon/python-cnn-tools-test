@@ -40,7 +40,7 @@ with tf.device('/device:CPU:0'):
     b = tf.constant([1.0, 2.0, 3.0, 4.0, 5.0, 6.0], shape=[3, 2], name='b')
     c = tf.matmul(a, b)
 
-    with tf.Session() as sess:
+    with tf.compat.v1.Session() as sess:
         print (sess.run(c))
         print ("CPU computation *** success ***.");
         print();
@@ -57,7 +57,7 @@ try:
         b = tf.constant([1.0, 2.0, 3.0, 4.0, 5.0, 6.0], shape=[3, 2], name='b')
         c = tf.matmul(a, b)
 
-        with tf.Session() as sess:
+        with tf.compat.v1.Session() as sess:
             print (sess.run(c))
             print ("GPU computation *** success ***.");
 except:
