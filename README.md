@@ -6,14 +6,14 @@ All tested with Tensorflow, Keras and Pytorch and Python 3.x **on Linux**.
 
  * For **TensorFlow** only - use tests 1, 4 and 5 only.
  * For **Keras** (which uses TensorFlow as a backend) - use tests 1, 2, 4, 5 only.
- * For **PyTorch** only - use test 3 only.
+ * For **PyTorch** only - use test 3 only (and 3a for testing with OpenCV also).
  * _See very simple test 1a for additionally testing sci-kit-learn is available in the same python environment_
 
 N.B. Durham Students - ***if testing/using on the Durham University LDS (linux) system*** you need to first run ```tensorflow1.14.0.init```, ```pytorch1.2.0.init``` and ```opencv4.1.1.init``` in the command shell to add the relevant paths for these tools to the ```PYTHONPATH``` environment variable (and be sitting at a machine with a GPU in it!).
 
 _Assumes that the git, wget, md5sum and curl tools are available on the command line or that similar tools are available to access git / download files._
 
-**Tests 4 and 5 assume you have OpenCV aleady installed** (with the extra modules also for Test 5) - OpenCV has its own testing page and test suite here - https://github.com/tobybreckon/python-examples-ip/blob/master/TESTING.md
+**Tests 3a, 4 and 5 assume you have OpenCV aleady installed** (with the extra modules also for Test 5) - OpenCV has its own testing page and test suite here - https://github.com/tobybreckon/python-examples-ip/blob/master/TESTING.md
 
 An additional test script for MxNet is also available (```mxnet-test.py```) but this is not currently included within the the set of software supported by the set of explicit tests below
 (which is primarily used to test our on campus teaching lab provision of TensorFlow, Keras and Pytorch at [Durham University](https:/www.durham.ac.uk/)).
@@ -152,7 +152,41 @@ We are using matplotlib: ???
 .. and this is in Python: PPP
 
 ```
-... where PT.PT.PT >= 0.x.x (or higher); "DEVICE STRING NAME" looks sensible given the GPU in the machine; PPP > 3.x; ??? = (doesn't matter)
+... where PT.PT.PT >= 1.x.x (or higher); "DEVICE STRING NAME" looks sensible given the GPU in the machine; PPP > 3.x; ??? = (doesn't matter)
+
+---
+
+## Test #3a - check Pytorch with OpenCV
+
+```
+.. (as per test 1 for steps 1 + 2 - no need to repeat if already completed)
+python3 ./pytorch-opencv-test.py
+```
+
+### Result #3a:
+
+Text output to console such that:
+
+```
+We are using pytorch: PT.PT.PT
+We believe we have the following # of GPU:
+1
+The first GPU available is:
+<DEVICE STRING NAME>
+
+We are using OpenCV: CCC
+.. do we have the OpenCV Contrib Modules: True
+.. do we have the OpenCV Non-free algorithms: True
+We are using numpy: ???
+We are using matplotlib: ???
+.. and this is in Python: PPP
+
+```
+... where PT.PT.PT >= 1.x.x (or higher); "DEVICE STRING NAME" looks sensible given the GPU in the machine; CCC >= 4.x.x (or higher); PPP > 3.x; ??? = (doesn't matter).
+
+Ideally, the OpenCV install would also pass the full set of tests in [this document](https://github.com/tobybreckon/python-examples-ip/blob/master/TESTING.md).
+
+[ to build with Non-free algorithms set OPENCV_ENABLE_NONFREE=TRUE in CMake ]
 
 ---
 
@@ -186,7 +220,7 @@ Then:
 
 - model download (step 3) will depend on network speed
 - **video displayed in real-time, is not slow or jerky,** and appropriate  Red Fire/Green Clear labels displayed depending on contents of image frame
-- may need to resize window to display full image correctly. Or press "f" for fullscreen mode. 
+- may need to resize window to display full image correctly. Or press "f" for fullscreen mode.
 - Press "x" to exit
 
 ---
