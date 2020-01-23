@@ -36,14 +36,17 @@ print();
 print ("Testing tensorflow with CPU ....")
 
 with tf.device('/device:CPU:0'):
-    a = tf.constant([1.0, 2.0, 3.0, 4.0, 5.0, 6.0], shape=[2, 3], name='a')
-    b = tf.constant([1.0, 2.0, 3.0, 4.0, 5.0, 6.0], shape=[3, 2], name='b')
-    c = tf.matmul(a, b)
+    g = tf.Graph()
+    with g.as_default():
 
-    with tf.compat.v1.Session() as sess:
-        print (sess.run(c))
-        print ("CPU computation *** success ***.");
-        print();
+        a = tf.constant([1.0, 2.0, 3.0, 4.0, 5.0, 6.0], shape=[2, 3], name='a')
+        b = tf.constant([1.0, 2.0, 3.0, 4.0, 5.0, 6.0], shape=[3, 2], name='b')
+        c = tf.matmul(a, b)
+
+        with tf.compat.v1.Session() as sess:
+            print (sess.run(c))
+            print ("CPU computation *** success ***.");
+            print();
 
 #####################################################################
 
@@ -53,13 +56,15 @@ print ("Testing tensorflow with GPU ....");
 
 try:
     with tf.device('/device:GPU:0'):
-        a = tf.constant([1.0, 2.0, 3.0, 4.0, 5.0, 6.0], shape=[2, 3], name='a')
-        b = tf.constant([1.0, 2.0, 3.0, 4.0, 5.0, 6.0], shape=[3, 2], name='b')
-        c = tf.matmul(a, b)
+        g = tf.Graph()
+        with g.as_default():
+            a = tf.constant([1.0, 2.0, 3.0, 4.0, 5.0, 6.0], shape=[2, 3], name='a')
+            b = tf.constant([1.0, 2.0, 3.0, 4.0, 5.0, 6.0], shape=[3, 2], name='b')
+            c = tf.matmul(a, b)
 
-        with tf.compat.v1.Session() as sess:
-            print (sess.run(c))
-            print ("GPU computation *** success ***.");
+            with tf.compat.v1.Session() as sess:
+                print (sess.run(c))
+                print ("GPU computation *** success ***.");
 except:
     print ("GPU computation *** FAILURE ***.")
     print();
