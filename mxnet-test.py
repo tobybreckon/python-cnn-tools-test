@@ -20,8 +20,8 @@ import os
 
 #####################################################################
 
-print("We are using MXNet: " + mxnet.__version__);
-print();
+print("We are using MXNet: " + mxnet.__version__)
+print()
 # list GPUs available
 gpus = mxnet.test_utils.list_gpus()
 if len(gpus) >=1:
@@ -32,14 +32,14 @@ if len(gpus) >=1:
 else:
 	print("MXNet says - sorry no GPU found")
 
-print();
+print()
 
 #####################################################################
 
 # check other stuff
 
-print("We are using numpy: " + np.__version__);
-print("We are using matplotlib: " + matplotlib.__version__);
+print("We are using numpy: " + np.__version__)
+print("We are using matplotlib: " + matplotlib.__version__)
 print(".. and this is in Python: " + sys.version)
 
 #####################################################################

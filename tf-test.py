@@ -17,17 +17,17 @@ import matplotlib
 
 #####################################################################
 
-print("We are using tensorflow: " + tf.__version__);
-print();
+print("We are using tensorflow: " + tf.__version__)
+print()
 
 #####################################################################
 
-print("We believe we have the following devices available:");
-print();
+print("We believe we have the following devices available:")
+print()
 
 from tensorflow.python.client import device_lib
 print(device_lib.list_local_devices())
-print();
+print()
 
 #####################################################################
 
@@ -45,14 +45,14 @@ with tf.device('/device:CPU:0'):
 
         with tf.compat.v1.Session() as sess:
             print (sess.run(c))
-            print ("CPU computation *** success ***.");
-            print();
+            print ("CPU computation *** success ***.")
+            print()
 
 #####################################################################
 
 # test GPU next
 
-print ("Testing tensorflow with GPU ....");
+print ("Testing tensorflow with GPU ....")
 
 try:
     with tf.device('/device:GPU:0'):
@@ -64,17 +64,17 @@ try:
 
             with tf.compat.v1.Session() as sess:
                 print (sess.run(c))
-                print ("GPU computation *** success ***.");
+                print ("GPU computation *** success ***.")
 except:
     print ("GPU computation *** FAILURE ***.")
-    print();
+    print()
 
-###############################################print();######################
+###############################################print()######################
 
 # check other stuff
 
-print("We are using numpy: " + np.__version__);
-print("We are using matplotlib: " + matplotlib.__version__);
+print("We are using numpy: " + np.__version__)
+print("We are using matplotlib: " + matplotlib.__version__)
 print(".. and this is in Python: " + sys.version)
 
 #####################################################################

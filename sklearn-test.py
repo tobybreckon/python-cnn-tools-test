@@ -17,15 +17,15 @@ import sys
 
 #####################################################################
 
-print("scikit-learn is available - version: " + sklearn.__version__);
-print();
+print("scikit-learn is available - version: " + sklearn.__version__)
+print()
 
 #####################################################################
 
 # check other stuff
 
-print("We are using numpy: " + np.__version__);
-print("We are using matplotlib: " + matplotlib.__version__);
+print("We are using numpy: " + np.__version__)
+print("We are using matplotlib: " + matplotlib.__version__)
 print(".. and this is in Python: " + sys.version)
 
 #####################################################################

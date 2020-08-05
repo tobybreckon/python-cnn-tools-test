@@ -19,21 +19,21 @@ import matplotlib
 
 #####################################################################
 
-print("We are using keras: " + keras.__version__);
-print();
+print("We are using keras: " + keras.__version__)
+print()
 
 #####################################################################
 
-print("We are using the following keras backend:");
-print(keras.backend.backend());
-print();
+print("We are using the following keras backend:")
+print(keras.backend.backend())
+print()
 
-###############################################print();######################
+###############################################print()######################
 
 # check other stuff
 
-print("We are using numpy: " + np.__version__);
-print("We are using matplotlib: " + matplotlib.__version__);
+print("We are using numpy: " + np.__version__)
+print("We are using matplotlib: " + matplotlib.__version__)
 print(".. and this is in Python: " + sys.version)
 
 #####################################################################
