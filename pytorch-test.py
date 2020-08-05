@@ -21,9 +21,10 @@ print("We are using pytorch: " + torch.__version__);
 print("We believe we have the following # of GPU:");
 print(torch.cuda.device_count());
 print();
-print("The first GPU available is:");
-print(torch.cuda.get_device_name(0));
-print();
+if (torch.cuda.device_count() > 0):
+    print("The first GPU available is:");
+    print(torch.cuda.get_device_name(0));
+    print();
 
 #####################################################################
 
