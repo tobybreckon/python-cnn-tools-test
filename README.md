@@ -178,12 +178,22 @@ The first GPU available is:
 We are using OpenCV: CCC
 .. do we have the OpenCV Contrib Modules: True
 .. do we have the OpenCV Non-free algorithms: True
-We are using numpy: ???
-We are using matplotlib: ???
-.. and this is in Python: PPP
+We are using numpy: <???>
+We are using matplotlib: <???>
+.. and this is in Python: PPP ??? (64 bit)
+
+Check Video I/O (OS identifier: MMM)
+... available camera backends:  LLL
+... available stream backends:  LLL
+... available video writer backends: LLL
+
+Available Cuda Information:
+... ['NVIDIA CUDA: YES (ver NNN, ???)', 'NVIDIA GPU arch: ???', 'NVIDIA PTX archs: ZZZ']
+
+OpenCL available (within OpenCV) ? : True
 
 ```
-... where PT.PT.PT >= 1.x.x (or higher); "DEVICE STRING NAME" looks sensible given the GPU in the machine; CCC >= 4.x.x (or higher); PPP > 3.x; ??? = (doesn't matter).
+... where PT.PT.PT >= 1.x.x (or higher); "DEVICE STRING NAME" looks sensible given the GPU in the machine; CCC >= 4.3.x (or higher), PPP > 3.x, MMM is sensible for the OS in use, each of the LLL list are sensible (may not all be identical) and ideally include FFMPEG + GSTREAMER in addition to V4L/V4L (for MMM = linux..), QT (for MMM = darwin) or DSHOW / MSMF (for MMM = win..), NNN > 10.x, ZZZ includes ``cuDNN: Yes`` and ??? = (doesn't matter).
 
 Ideally, the OpenCV install would also pass the full set of tests in [this document](https://github.com/tobybreckon/python-examples-ip/blob/master/TESTING.md).
 
