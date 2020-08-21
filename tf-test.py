@@ -54,7 +54,10 @@ with tf.device('/device:CPU:0'):
 
 print ("Testing tensorflow with GPU ....")
 
+gpus = tf.config.experimental.list_physical_devices('GPU')
+
 try:
+    tf.config.experimental.set_visible_devices(gpus[0], 'GPU')
     with tf.device('/device:GPU:0'):
         g = tf.Graph()
         with g.as_default():
