@@ -1,10 +1,11 @@
 # Verification Testing for Deep Learning CNN Tools
 
-As Tensorflow, Keras and Pytorch are complex beasts, to ensure the GPU installation of each is working correctly we perform the following simple tests.
+As Tensorflow, Keras and Pytorch are complex pieces of software, to ensure the GPU installation of each is working correctly we perform the following simple tests.
 
-All tested with Tensorflow, Keras and Pytorch and Python 3.x **on Linux**.
+All tested with Tensorflow, Keras, Pytorch and Python 3.x (with OpenCV as needed) **on Linux**.
 
- * For **TensorFlow** only - use tests 1, 4 and 5 only.
+ * For **TensorFlow 1.x** only - use tests 1, 4 and 5 only.
+ * For **TensorFlow 2.x** only - use tests 1 and 6 only.
  * For **Keras** (which uses TensorFlow as a backend) - use tests 1, 2, 4, 5 only.
  * For **PyTorch** only - use test 3 only (and 3a for testing with OpenCV also).
  * _See very simple test 1a for additionally testing sci-kit-learn is available in the same python environment_
@@ -20,7 +21,7 @@ An additional test script for MxNet is also available (```mxnet-test.py```) but 
 
 ---
 
-## Test #1 - check TensorFlow:
+## Test #1 - check TensorFlow (1.x or 2.x):
 
 ```
 git clone https://github.com/tobybreckon/python-cnn-tools-test.git
@@ -190,9 +191,9 @@ Ideally, the OpenCV install would also pass the full set of tests in [this docum
 
 ---
 
-## Test #4 - TensorFlow and OpenCV full system check - low performance
+## Test #4 - TensorFlow 1.x and OpenCV full system check - low performance
 
-* this tests we can use basic OpenCV (hopefully 3.x) with TensorFlow in the same python script
+* this tests we can use basic OpenCV (hopefully 3.x) with TensorFlow 1.x in the same python script
 
 ```
 git clone https://github.com/tobybreckon/fire-detection-cnn.git
@@ -225,9 +226,9 @@ Then:
 
 ---
 
-## Test #5 - TensorFlow and OpenCV full system check - high performance
+## Test #5 - TensorFlow 1.x and OpenCV full system check - high performance
 
-* this tests we can use advanced extra module functionality within OpenCV (hopefully 3.x) with TensorFlow in the same python script
+* this tests we can use advanced extra module functionality within OpenCV (hopefully 4.x) with TensorFlow 1.x in the same python script
 
 ```
 (as per steps 1-3 of Test 4 - no need to repeat if already completed)
@@ -253,3 +254,48 @@ Then:
 
 - video displayed in real-time, is not slow or jerky **with update of several frames per second observed**, and appropriate Red/Green labels displayed depending on contents of  (where Green is fire regions)
 - Press "x" to exit
+
+---
+
+## Test #6 - TensorFlow 2.x and OpenCV full system check
+
+* this tests we can use advanced extra module functionality within OpenCV (hopefully 4.x) with TensorFlow 2.x in the same python script
+
+```
+wget -q https://raw.githubusercontent.com/SIlvaMFPedro/pyimagesearch/3e5c922b5f905078322d2283d704ef8875f043e0/region-proposal-object-detection/region_proposal_detection.py -O region_proposal_detection.py
+wget -q https://raw.githubusercontent.com/jrosebr1/imutils/master/imutils/object_detection.py -O object_detection.py
+wget -q https://raw.githubusercontent.com/SIlvaMFPedro/pyimagesearch/3e5c922b5f905078322d2283d704ef8875f043e0/region-proposal-object-detection/beagle.png -O beagle.png
+cat region_proposal_detection.py | sed s/waitKey\(0\)/waitKey\(1000\)/g > tmp.py
+cat tmp.py | sed s/imutils.object_detection/object_detection/g > region_proposal_detection-auto.py
+python3 ./region_proposal_detection-auto.py --image beagle.png
+
+
+```
+
+### Result #6:
+
+Text output to console such that:
+
+```
+???
+[INFO] Performing selective search with 'fast' method...
+[INFO] Found '[[  0 205  14  14]
+ [317  44  27  16]
+ [362 298  53  38]
+ ...
+ [  0   0 415 289]
+ [376  88 124 248]
+ [ 25  63 406 273]]'regions with 'fast' method of selective search!
+[INFO] Proposals shape: (534, 224, 224, 3)
+[INFO] Classifying proposals...
+[INFO] Showing results for 'beagle'
+[INFO] Showing results for 'quill'
+[INFO] Showing results for 'clog'
+[INFO] Showing results for 'paper_towel'
+```
+
+... ??? = (detail doesn't matter but should clearly indicate GPU usage by type/name/bus or similar where a GPU is available or CPU otherwise).
+
+Then:
+
+- an image of a dog is dislayed in a window with a series of green bounding boxes on it that i turn surround varying objects in the scene.
