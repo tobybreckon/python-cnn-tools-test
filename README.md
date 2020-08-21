@@ -259,7 +259,7 @@ Then:
 
 ## Test #6 - TensorFlow 2.x and OpenCV full system check
 
-* this tests we can use advanced extra module functionality within OpenCV (hopefully 4.x) with TensorFlow 2.x in the same python script
+* this tests we can use a OpenCV (hopefully 4.x) with TensorFlow 2.x in the same python script
 
 ```
 wget -q https://raw.githubusercontent.com/SIlvaMFPedro/pyimagesearch/3e5c922b5f905078322d2283d704ef8875f043e0/region-proposal-object-detection/region_proposal_detection.py -O region_proposal_detection.py
