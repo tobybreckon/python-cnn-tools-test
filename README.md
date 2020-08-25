@@ -308,4 +308,4 @@ Text output to console such that:
 
 Then:
 
-- an image of a dog is dislayed in a window with a series of green bounding boxes on it that in turn surround varying objects in the scene.
+- an image of a dog is displayed in a window with a series of green bounding boxes on it that in turn surround varying objects in the scene.
