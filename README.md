@@ -203,7 +203,7 @@ Ideally, the OpenCV install would also pass the full set of tests in [this docum
 
 ## Test #4 - TensorFlow 1.x and OpenCV full system check - low performance
 
-* this tests we can use basic OpenCV (hopefully 3.x) with TensorFlow 1.x in the same python script
+* this tests we can use basic OpenCV (hopefully 4.x) with TensorFlow 1.x in the same python script
 
 ```
 git clone https://github.com/tobybreckon/fire-detection-cnn.git
@@ -308,4 +308,4 @@ Text output to console such that:
 
 Then:
 
-- an image of a dog is dislayed in a window with a series of green bounding boxes on it that i turn surround varying objects in the scene.
+- an image of a dog is dislayed in a window with a series of green bounding boxes on it that in turn surround varying objects in the scene.
