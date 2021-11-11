@@ -10,7 +10,7 @@ All tested with Tensorflow, Keras, Pytorch and Python 3.x (with OpenCV as needed
  * For **PyTorch** only - use test 3 only (and 3a for testing with OpenCV also).
  * _See very simple test 1a for additionally testing sci-kit-learn is available in the same python environment_
 
-N.B. Durham Students - ***if testing/using on the Durham University LDS (linux) system*** you need to first run ```tensorflowX.X.X.init```, ```pytorchX.X.X.init``` and ```opencvX.X.X.init``` in the (Linux, not the Python) command shell where X.X.X is the version number, or alternatively without it which should hopefully default to the latest version installed (e.g. `tensorflow.init```, ```pytorch.init```, ```opencv.init```), to add the relevant paths for these tools to the ```PYTHONPATH``` environment variable (and be sitting at a machine with a GPU in it!).
+N.B. Durham Students - ***if testing/using on the Durham University LDS (linux) system*** you need to first run ```tensorflowX.X.X.init```, ```pytorchX.X.X.init``` and ```opencvX.X.X.init``` in the (Linux, not the Python) command shell where X.X.X is the version number, or alternatively without it which should hopefully default to the latest version installed (e.g. ```tensorflow.init```, ```pytorch.init```, ```opencv.init```), to add the relevant paths for these tools to the ```PYTHONPATH``` environment variable (and be sitting at a machine with a GPU in it!).
 
 _Assumes that the git, wget, md5sum and curl tools are available on the command line or that similar tools are available to access git / download files._
 
