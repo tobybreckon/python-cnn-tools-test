@@ -10,6 +10,7 @@
 
 #####################################################################
 
+from tensorflow.python.client import device_lib
 import tensorflow as tf
 import numpy as np
 import sys
@@ -25,7 +26,6 @@ print()
 print("We believe we have the following devices available:")
 print()
 
-from tensorflow.python.client import device_lib
 print(device_lib.list_local_devices())
 print()
 
@@ -33,7 +33,7 @@ print()
 
 # test CPU first
 
-print ("Testing tensorflow with CPU ....")
+print("Testing tensorflow with CPU ....")
 
 with tf.device('/device:CPU:0'):
     g = tf.Graph()
@@ -44,15 +44,15 @@ with tf.device('/device:CPU:0'):
         c = tf.matmul(a, b)
 
         with tf.compat.v1.Session() as sess:
-            print (sess.run(c))
-            print ("CPU computation *** success ***.")
+            print(sess.run(c))
+            print("CPU computation *** success ***.")
             print()
 
 #####################################################################
 
 # test GPU next
 
-print ("Testing tensorflow with GPU ....")
+print("Testing tensorflow with GPU ....")
 
 gpus = tf.config.experimental.list_physical_devices('GPU')
 
@@ -61,15 +61,17 @@ try:
     with tf.device('/device:GPU:0'):
         g = tf.Graph()
         with g.as_default():
-            a = tf.constant([1.0, 2.0, 3.0, 4.0, 5.0, 6.0], shape=[2, 3], name='a')
-            b = tf.constant([1.0, 2.0, 3.0, 4.0, 5.0, 6.0], shape=[3, 2], name='b')
+            a = tf.constant([1.0, 2.0, 3.0, 4.0, 5.0, 6.0],
+                            shape=[2, 3], name='a')
+            b = tf.constant([1.0, 2.0, 3.0, 4.0, 5.0, 6.0],
+                            shape=[3, 2], name='b')
             c = tf.matmul(a, b)
 
             with tf.compat.v1.Session() as sess:
-                print (sess.run(c))
-                print ("GPU computation *** success ***.")
-except:
-    print ("GPU computation *** FAILURE ***.")
+                print(sess.run(c))
+                print("GPU computation *** success ***.")
+except BaseException:
+    print("GPU computation *** FAILURE ***.")
     print()
 
 ###############################################print()######################

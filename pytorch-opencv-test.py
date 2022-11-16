@@ -27,6 +27,7 @@ def extra_opencv_modules_present():
     (is_built, not_built) = cv2.getBuildInformation().split("Disabled:")
     return ('xfeatures2d' in is_built)
 
+
 def non_free_opencv_algorithms_present():
     (before, after) = cv2.getBuildInformation().split("Non-free algorithms:")
     output_list = after.split("\n")
@@ -35,6 +36,7 @@ def non_free_opencv_algorithms_present():
 #####################################################################
 
 # check pytorch
+
 
 print("We are using pytorch: " + torch.__version__)
 print("We believe we have the following # of GPU:")

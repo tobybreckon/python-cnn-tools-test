@@ -24,13 +24,13 @@ print("We are using MXNet: " + mxnet.__version__)
 print()
 # list GPUs available
 gpus = mxnet.test_utils.list_gpus()
-if len(gpus) >=1:
-	print("MXNET has "+str(len(gpus))+" GPUs available.")
-	for i in gpus:
-		print("The GPUs available are: ")
-		print("- GPU number:",i)
+if len(gpus) >= 1:
+    print("MXNET has " + str(len(gpus)) + " GPUs available.")
+    for i in gpus:
+        print("The GPUs available are: ")
+        print("- GPU number:", i)
 else:
-	print("MXNet says - sorry no GPU found")
+    print("MXNet says - sorry no GPU found")
 
 print()
 
