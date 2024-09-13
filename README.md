@@ -66,7 +66,7 @@ We are using matplotlib: ???
 .. and this is in Python: PPP
 
 ```
-...  where T.T.T >= 1.9.x; MMM > 0; PPP > 3.x; ??? = (doesn't matter)
+...  where T.T.T >= 2.x.x; MMM > 0; PPP > 3.x; ??? = (doesn't matter)
 
 ---
 
@@ -153,7 +153,7 @@ We are using matplotlib: ???
 .. and this is in Python: PPP
 
 ```
-... where PT.PT.PT >= 1.x.x (or higher); "DEVICE STRING NAME" looks sensible given the GPU in the machine; PPP > 3.x; ??? = (doesn't matter)
+... where PT.PT.PT >= 2.x.x (or higher); "DEVICE STRING NAME" looks sensible given the GPU in the machine; PPP > 3.x; ??? = (doesn't matter)
 
 ---
 
@@ -193,7 +193,7 @@ Available Cuda Information:
 OpenCL available (within OpenCV) ? : True
 
 ```
-... where PT.PT.PT >= 1.x.x (or higher); "DEVICE STRING NAME" looks sensible given the GPU in the machine; CCC >= 4.3.x (or higher), PPP > 3.x, MMM is sensible for the OS in use, each of the LLL list are sensible (may not all be identical) and ideally include FFMPEG + GSTREAMER in addition to V4L/V4L (for MMM = linux..), QT (for MMM = darwin) or DSHOW / MSMF (for MMM = win..), NNN > 10.x, ZZZ includes ``cuDNN: Yes`` and ??? = (doesn't matter). In addition, for maximum performance RRR ideally includes ``CUFFT CUBLAS FAST_MATH``.
+... where PT.PT.PT >= 2.x.x (or higher); "DEVICE STRING NAME" looks sensible given the GPU in the machine; CCC >= 4.10.x (or higher), PPP > 3.x, MMM is sensible for the OS in use, each of the LLL list are sensible (may not all be identical) and ideally include FFMPEG + GSTREAMER in addition to V4L/V4L (for MMM = linux..), QT (for MMM = darwin) or DSHOW / MSMF (for MMM = win..), NNN > 10.x, ZZZ includes ``cuDNN: Yes`` and ??? = (doesn't matter). In addition, for maximum performance RRR ideally includes ``CUFFT CUBLAS FAST_MATH``.
 
 Ideally, the OpenCV install would also pass the full set of tests in [this document](https://github.com/tobybreckon/python-examples-ip/blob/master/TESTING.md).
 
@@ -272,12 +272,7 @@ Then:
 * this tests we can use a OpenCV (hopefully 4.x) with TensorFlow 2.x in the same python script
 
 ```
-wget -q https://raw.githubusercontent.com/SIlvaMFPedro/pyimagesearch/3e5c922b5f905078322d2283d704ef8875f043e0/region-proposal-object-detection/region_proposal_detection.py -O region_proposal_detection.py
-wget -q https://raw.githubusercontent.com/jrosebr1/imutils/master/imutils/object_detection.py -O object_detection.py
-wget -q https://raw.githubusercontent.com/SIlvaMFPedro/pyimagesearch/3e5c922b5f905078322d2283d704ef8875f043e0/region-proposal-object-detection/beagle.png -O beagle.png
-cat region_proposal_detection.py | sed s/waitKey\(0\)/waitKey\(1000\)/g > tmp.py
-cat tmp.py | sed s/imutils.object_detection/object_detection/g > region_proposal_detection-auto.py
-python3 ./region_proposal_detection-auto.py --image beagle.png
+python3 ./tf-opencv-test.py
 
 
 ```
@@ -287,25 +282,57 @@ python3 ./region_proposal_detection-auto.py --image beagle.png
 Text output to console such that:
 
 ```
+We are using tensorflow: T.T.T
+
+We believe we have the following devices available:
+
+[name: "/device:CPU:0"
+device_type: "CPU"
+memory_limit: MMMM
 ???
-[INFO] Performing selective search with 'fast' method...
-[INFO] Found '[[  0 205  14  14]
- [317  44  27  16]
- [362 298  53  38]
- ...
- [  0   0 415 289]
- [376  88 124 248]
- [ 25  63 406 273]]'regions with 'fast' method of selective search!
-[INFO] Proposals shape: (534, 224, 224, 3)
-[INFO] Classifying proposals...
-[INFO] Showing results for 'beagle'
-[INFO] Showing results for 'quill'
-[INFO] Showing results for 'clog'
-[INFO] Showing results for 'paper_towel'
+]
+[name: "/device:GPU:0"
+device_type: "GPU"
+memory_limit: MMMM
+???
+]
+
+Testing tensorflow with CPU ....
+???
+[[22. 28.]
+ [49. 64.]]
+CPU computation *** success ***.
+
+Testing tensorflow with GPU ....
+???
+[[22. 28.]
+ [49. 64.]]
+GPU computation *** success ***.
+
+We are using numpy: ???
+We are using matplotlib: ???
+.. and this is in Python: PPP
+
+We are using OpenCV: CCC
+.. do we have the OpenCV Contrib Modules: True
+.. do we have the OpenCV Non-free algorithms: True
+We are using numpy: <???>
+We are using matplotlib: <???>
+.. and this is in Python: PPP ??? (64 bit)
+
+Check Video I/O (OS identifier: MMM)
+... available camera backends:  LLL
+... available stream backends:  LLL
+... available video writer backends: LLL
+
+Available Cuda Information:
+... ['NVIDIA CUDA: YES (ver NNN, RRR)', 'NVIDIA GPU arch: ???', 'NVIDIA PTX archs: ZZZ']
+
+OpenCL available (within OpenCV) ? : True
+
 ```
+...  where T.T.T >= 2.x.x; MMM > 0; PPP > 3.x; ??? = (doesn't matter); CCC >= 4.10.x (or higher), PPP > 3.x, MMM is sensible for the OS in use, each of the LLL list are sensible (may not all be identical) and ideally include FFMPEG + GSTREAMER in addition to V4L/V4L (for MMM = linux..), QT (for MMM = darwin) or DSHOW / MSMF (for MMM = win..), NNN > 10.x, ZZZ includes ``cuDNN: Yes`` and ??? = (doesn't matter). In addition, for maximum performance RRR ideally includes ``CUFFT CUBLAS FAST_MATH``.
 
-... ??? = (detail doesn't matter but should clearly indicate GPU usage by type/name/bus or similar where a GPU is available or CPU otherwise).
+Ideally, the OpenCV install would also pass the full set of tests in [this document](https://github.com/tobybreckon/python-examples-ip/blob/master/TESTING.md).
 
-Then:
-
-- an image of a dog is displayed in a window with a series of green bounding boxes on it that in turn surround varying objects in the scene.
+[ to build with Non-free algorithms set OPENCV_ENABLE_NONFREE=TRUE in CMake ]
