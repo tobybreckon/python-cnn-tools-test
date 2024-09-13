@@ -18,6 +18,26 @@ import matplotlib
 
 #####################################################################
 
+import cv2
+import struct
+import re
+
+#####################################################################
+
+# check if the OpenCV we are using has the extra modules available
+
+def extra_opencv_modules_present():
+    (is_built, not_built) = cv2.getBuildInformation().split("Disabled:")
+    return ('xfeatures2d' in is_built)
+
+
+def non_free_opencv_algorithms_present():
+    (before, after) = cv2.getBuildInformation().split("Non-free algorithms:")
+    output_list = after.split("\n")
+    return ('YES' in output_list[0])
+
+#####################################################################
+
 print("We are using tensorflow: " + tf.__version__)
 print()
 
