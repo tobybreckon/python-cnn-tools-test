@@ -6,7 +6,7 @@ All tested with Tensorflow, Keras, Pytorch and Python 3.x (with OpenCV as needed
 
  * For **TensorFlow 1.x** only - use tests 1, 4 and 5 only.
  * For **TensorFlow 2.x** only - use tests 1 and 6 only.
- * For **Keras** (which uses TensorFlow as a backend) - use tests 2 only.
+ * For **Keras** (which uses TensorFlow as a backend) - use test 2 only.
  * For **PyTorch** only - use test 3 only (and 3a for testing with OpenCV also).
  * _See very simple test 1a for additionally testing sci-kit-learn is available in the same python environment_
 
