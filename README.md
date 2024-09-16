@@ -6,7 +6,7 @@ All tested with Tensorflow, Keras, Pytorch and Python 3.x (with OpenCV as needed
 
  * For **TensorFlow 1.x** only - use tests 1, 4 and 5 only.
  * For **TensorFlow 2.x** only - use tests 1 and 6 only.
- * For **Keras** (which uses TensorFlow as a backend) - use tests 1, 2, 4, 5 only.
+ * For **Keras** (which uses TensorFlow as a backend) - use tests 2 only.
  * For **PyTorch** only - use test 3 only (and 3a for testing with OpenCV also).
  * _See very simple test 1a for additionally testing sci-kit-learn is available in the same python environment_
 
@@ -108,7 +108,7 @@ python3 ./keras-test.py
 Text output to console such that:
 
 ```
-Using TensorFlow backend.
+???
 We are using keras: K.K.K
 
 We are using the following keras backend:
@@ -120,7 +120,7 @@ We are using matplotlib: ???
 .. and this is in Python: PPP
 
 ```
-... where K.K.K >= 2.2.x (or higher); PPP > 3.x; ??? = (doesn't matter)
+... where K.K.K >= 2.2.x (or higher); PPP > 3.x; ??? = (doesn't matter, ignore warnings)
 
 ---
 
